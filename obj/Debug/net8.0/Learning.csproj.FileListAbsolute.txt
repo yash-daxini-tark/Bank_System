@@ -1,0 +1,14 @@
+C:\Users\YashDaxini\Desktop\C#Practice\Learning\bin\Debug\net8.0\Learning.exe
+C:\Users\YashDaxini\Desktop\C#Practice\Learning\bin\Debug\net8.0\Learning.deps.json
+C:\Users\YashDaxini\Desktop\C#Practice\Learning\bin\Debug\net8.0\Learning.runtimeconfig.json
+C:\Users\YashDaxini\Desktop\C#Practice\Learning\bin\Debug\net8.0\Learning.dll
+C:\Users\YashDaxini\Desktop\C#Practice\Learning\bin\Debug\net8.0\Learning.pdb
+C:\Users\YashDaxini\Desktop\C#Practice\Learning\obj\Debug\net8.0\Learning.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\YashDaxini\Desktop\C#Practice\Learning\obj\Debug\net8.0\Learning.AssemblyInfoInputs.cache
+C:\Users\YashDaxini\Desktop\C#Practice\Learning\obj\Debug\net8.0\Learning.AssemblyInfo.cs
+C:\Users\YashDaxini\Desktop\C#Practice\Learning\obj\Debug\net8.0\Learning.csproj.CoreCompileInputs.cache
+C:\Users\YashDaxini\Desktop\C#Practice\Learning\obj\Debug\net8.0\Learning.dll
+C:\Users\YashDaxini\Desktop\C#Practice\Learning\obj\Debug\net8.0\refint\Learning.dll
+C:\Users\YashDaxini\Desktop\C#Practice\Learning\obj\Debug\net8.0\Learning.pdb
+C:\Users\YashDaxini\Desktop\C#Practice\Learning\obj\Debug\net8.0\Learning.genruntimeconfig.cache
+C:\Users\YashDaxini\Desktop\C#Practice\Learning\obj\Debug\net8.0\ref\Learning.dll
