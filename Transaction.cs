@@ -21,7 +21,9 @@ namespace Learning
         }
         public string giveTransactionDetails()
         {
-            return "\nTransaction Type = " + (this.transactionAmount > 0 ? "Debit" : "Credit") + "\nAmount = " + Math.Abs(this.transactionAmount) + "\nDate & Time :- " + this.transactionDate + "\n";
+            StringBuilder transactionDetails = new StringBuilder();
+            transactionDetails.AppendLine($"{(this.transactionAmount > 0 ? "Debit\t\t" : "Credit\t\t")}\t\t{Math.Abs(this.transactionAmount)}\t\t{transactionDate}");
+            return transactionDetails.ToString();
         }
     }
 }

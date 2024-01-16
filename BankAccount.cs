@@ -12,8 +12,8 @@ namespace Learning
         public string Name { get; set; }
 
         private double Balance { get; set; }
-        
-        public List<Transaction> transactions  = new List<Transaction>();
+
+        public List<Transaction> transactions = new List<Transaction>();
 
         public BankAccount(string Name)
         {
@@ -30,33 +30,56 @@ namespace Learning
 
         public void DebitBalance(double Balance)
         {
-            if (Balance < 0)
+            try
             {
-                throw new ArgumentOutOfRangeException("You must give balance more than 0");
+                if (Balance < 0)
+                {
+                    throw new ArgumentOutOfRangeException("You must give balance more than 0");
+                }
+                this.Balance += Balance;
+                transactions.Add(new Transaction(Balance));
             }
-            this.Balance += Balance;
-            transactions.Add(new Transaction(Balance));
+            catch (ArgumentOutOfRangeException exception)
+            {
+                Console.WriteLine("You must give balance more than 0");
+            }
         }
         public void CreditBalance(double Balance)
         {
-            if(Balance < 0)
+            try
             {
-                throw new ArgumentOutOfRangeException("You must give balance more than 0");
+                if (Balance < 0)
+                {
+                    throw new ArgumentOutOfRangeException("You must give balance more than 0");
+                }
+                if (this.Balance < Balance)
+                {
+                    throw new InvalidOperationException("Can't Credit because you don't have sufficient balance");
+                }
+                this.Balance -= Balance;
+                transactions.Add(new Transaction(-Balance));
             }
-            if(this.Balance < Balance)
+            catch (ArgumentOutOfRangeException exception)
             {
-                throw new InvalidOperationException("Can't Credit because you don't have sufficient balance");
+                Console.WriteLine("You must give balance more than 0");
             }
-            this.Balance -= Balance;
-            transactions.Add(new Transaction(-Balance));
+            catch (InvalidOperationException exception)
+            {
+                Console.WriteLine("Can't Credit because you don't have sufficient balance");
+            }
+
         }
-        public void giveMiniStatement()
+        public string giveMiniStatement()
         {
+            StringBuilder miniStatement = new StringBuilder();
+            miniStatement.AppendLine("Transaction Type\t\tAmount\t\tDate & Time ");
+            Console.WriteLine("\n**** Transactions Details ****\n");
             foreach (var transaction in transactions)
             {
-                Console.WriteLine("\n**** Transactions Details ****");
-                Console.WriteLine(transaction.giveTransactionDetails());
+                miniStatement.AppendLine(transaction.giveTransactionDetails());
             }
+            miniStatement.AppendLine("");
+            return miniStatement.ToString();
         }
     }
 }

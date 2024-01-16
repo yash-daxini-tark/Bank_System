@@ -13,7 +13,7 @@ namespace Learning // Note: actual namespace depends on the project name.
             yAccount.DebitBalance(1234.0);
             yAccount.CreditBalance(-1);
             Console.WriteLine(yAccount.GetBalance());
-            yAccount.giveMiniStatement();
+            Console.WriteLine(yAccount.giveMiniStatement());
         }
     }
 }
